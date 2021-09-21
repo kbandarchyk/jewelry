@@ -1,0 +1,549 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: #FFFFFF;
+
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1130px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* HEADER*/
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+}
+
+.header__inner {
+
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.header__left-nav {
+    width: 33.3333%;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.header__logo {
+    width: 33.3333%;
+}
+
+.header__right-nav {
+    width: 33.3333%;
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__item {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    opacity: 0.7;
+    transition: opacity 0.2s linear;
+    color: #FFFFFF;
+}
+
+.header__left-nav .nav__item {
+    margin-right: 25px;
+}
+
+.header__right-nav .nav__item {
+    margin-right: 40px;
+}
+
+.nav__item:last-child {
+    margin-right: 0;
+}
+
+.nav__item:hover {
+    opacity: 1;
+}
+
+.nav__item--icon-text {
+    display: flex;
+}
+
+.nav__item--icon-text > img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    transform: translate(0, 20%);
+}
+
+.logo__img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* INTRO */
+
+.intro {
+    background: url("/jewelry/assets/img/intro/bg.png") no-repeat center;
+    background-size: cover;
+
+}
+
+.intro__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 950px;
+
+}
+
+.intro__title {
+    font-family: 'Noto Serif', serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.36em;
+    margin-bottom: 50px;
+}
+
+.intro__inner .btn {
+    margin-bottom: 80px;
+}
+
+.intro_brands {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+    width: 100%;
+}
+
+.intro_brand {
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 10px 35px;
+    min-width: 150px;
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+    text-align: center;
+    opacity: 0.8;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+.btn--white {
+    background: #FFFFFF;
+    color: #333333;
+    opacity: 1;
+}
+
+.btn--black {
+    background: #333333;
+    color: #FFFFFF;
+    opacity: 1;
+}
+
+.btn:hover {
+    opacity: 1;
+    background: #333333;
+}
+
+.btn--white:hover {
+    background: #f2ebff;
+}
+
+.btn--black:hover {
+    background: #000000;
+}
+
+/* PRODUCTS*/
+
+.products {
+    padding: 100px 0 120px;
+    color: #333333;
+}
+
+.products__subtitle {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+.products__title {
+    font-family: 'Noto Serif', serif;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.366em;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.products__sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 55px;
+}
+
+.products__sections .section {
+    position: relative;
+    border: 1px solid #D6D6D6;
+    transition: all 0.2s linear;
+}
+
+.section__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 165px;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    line-height: 1.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #333333;
+    cursor: pointer;
+}
+
+.products__sections .section:last-child {
+    margin-right: 0;
+}
+
+.products__sections .section:hover {
+    background: #D6D6D6;
+}
+
+.products__sections .section.active {
+    background: #333333;
+
+}
+
+.products__sections .section.active .section__link {
+    color: #FFFFFF;
+}
+
+.products__subsections {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.products__subsections .subsection {
+    position: relative;
+    height: 280px;
+    cursor: pointer;
+}
+
+.products__subsections .subsection > img {
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+    z-index: 1;
+}
+
+.subsection__link {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    letter-spacing: 0.1em;
+    line-height: 1.16em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.products__subsections .subsection:hover > a {
+    text-decoration: underline;
+}
+
+
+/* OUR-SALOONS*/
+
+.our_saloons {
+    padding: 100px 0;
+    background: url("/jewelry/assets/img/our_saloons/bg.png") no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+
+
+.our_saloons__subtitle {
+    font-size: 21px;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+
+.our_saloons__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.366em;
+    margin-bottom: 45px;
+}
+
+.our_saloons__text {
+    width: 730px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4em;
+    margin: 0 auto 60px;
+
+}
+
+
+/* BLOG */
+
+.blog {
+    padding: 120px 0;
+    color: #333333;
+    text-align: center;
+}
+
+.blog__subtitle {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+
+.blog__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.366em;
+    margin-bottom: 60px;
+}
+
+.blog__tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.blog__tip {
+    position: relative;
+    height: 370px;
+    cursor: pointer;
+}
+
+.blog__tip > img {
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    z-index: 1;
+}
+
+
+.blog__link {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    line-height: 1.4em;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.blog__tip:hover > .blog__link  {
+    text-decoration: underline;
+}
+
+
+/* SOCIALS*/
+
+.socials {
+    padding: 0 0 150px;
+    color: #333333;
+    text-align: center;
+}
+
+.socials__tag {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+
+.socials__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3666em;
+    margin-bottom: 60px;
+}
+
+.socials__contents {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "video-1 video-1 photo-1 photo-2"
+                         "photo-3 photo-4 video-2 video-2";
+}
+
+.social_content {
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+.social_content > img,
+.social_content> video {
+    position: absolute;
+    width: auto;
+    max-width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50%);
+}
+
+.video-1 {
+    grid-area: video-1;
+}
+
+.video-2 {
+    grid-area: video-2;
+}
+
+.photo-1 {
+    grid-area: photo-1;
+}
+
+.photo-2 {
+    grid-area: photo-2;
+}
+
+.photo-3 {
+    grid-area: photo-3;
+}
+
+.photo-4 {
+    grid-area: photo-4;
+}
+
+.play_btn:hover {
+    cursor: pointer;
+}
+
+
+/* SUBSCRIPTION*/
+
+.subscription {
+    padding: 100px 0 120px;
+    background: url("/jewelry/assets/img/subscription/bg.png") no-repeat center;
+    background-size: cover;
+    text-align: center;
+}
+
+.subscription__subtitle {
+    font-size: 21px;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+}
+
+.subscription__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.366em;
+    margin-bottom: 60px;
+}
+
+.subscription__content {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.subscription__benefits {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subscription__benefit {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.subscription__benefit:last-child {
+    margin-bottom: 0;
+}
+
+.subscription__benefit > img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    transform: translate(0, 20%);
+}
+
+.subscription__form {
+    width: 50%;
+    border: 1px solid #FFFFFF;
+    padding: 15px;
+}
+
+.subscription__form > form {
+    padding: 20px 22px;
+    background: #FFFFFF;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.subscription__form > form > input {
+    width: 65%;
+    margin-right: 15px;
+    padding: 0 15px 0;
+    font-size: 18px;
+}
+
+.subscription__form > form > button {
+    width: 35%;
+}
