@@ -137,12 +137,14 @@ p {
 
 .intro_brands {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 0;
     width: 100%;
 }
 
 .intro_brand {
+    width: 16%;
 }
 
 /* BUTTONS */
@@ -219,6 +221,7 @@ p {
 }
 
 .products__sections .section {
+    width: 16%;
     position: relative;
     border: 1px solid #D6D6D6;
     transition: all 0.2s linear;
@@ -229,8 +232,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 165px;
-    height: 55px;
+    padding:  15px 0;
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.1em;
@@ -268,12 +270,13 @@ p {
     position: relative;
     height: 280px;
     cursor: pointer;
+    overflow: hidden;
+    min-width: 100%;
 }
 
 .products__subsections .subsection > img {
     position: absolute;
     width: auto;
-    max-width: 100%;
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
@@ -364,12 +367,13 @@ p {
     position: relative;
     height: 370px;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .blog__tip > img {
     position: absolute;
     width: auto;
-    max-width: 100%;
+    min-width: 100%;
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50% );
@@ -433,7 +437,7 @@ p {
 .social_content> video {
     position: absolute;
     width: auto;
-    max-width: 100%;
+    min-width: 100%;
     top: 50%;
     left: 50%;
     transform: translate( -50%, -50%);
@@ -546,4 +550,213 @@ p {
 
 .subscription__form > form > button {
     width: 35%;
+}
+
+
+@media (max-width: 1400px) {
+
+}
+
+@media (max-width: 1200px) {
+
+}
+
+
+@media (max-width: 992px) {
+
+}
+
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+    .header__left-nav {
+        display: none;
+    }
+
+    .header__right-nav {
+        display: none;
+    }
+
+    .header__logo{
+        width: 100%;
+    }
+
+    /* INTRO */
+
+    .intro__inner {
+        height: 550px;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+        padding: 50px 0 60px;
+    }
+
+    .products__sections {
+        margin-bottom: 0;
+    }
+
+    .products__sections .section {
+        width: 33%;
+        margin-bottom: 5px;
+    }
+
+    .products__subsections {
+        gap: 5px;
+    }
+
+    /* BLOG */
+
+    .blog {
+        padding: 60px 0;
+    }
+
+    .blog__title {
+        margin-bottom: 50px;
+    }
+
+    /* SOCIALS*/
+    .socials {
+        padding: 0 0 50px;
+    }
+
+    .socials__contents {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "video-1 video-1"
+                             "photo-1 photo-2"
+                             "photo-3 photo-4"
+                             "video-2 video-2";
+    }
+
+    /* SUBSCRIPTION*/
+
+    .subscription__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__benefits {
+        margin-bottom: 20px;
+    }
+
+    .subscription__form > form > input {
+        width: 65%;
+        margin-right: 10px;
+        padding: 0 5px 0;
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 576px) {
+
+    /* INTRO */
+
+    .intro_brand {
+        width: 33%;
+    }
+
+    .intro__title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    /* PRODUCTS*/
+
+    .products__subsections {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* BLOG */
+
+    .blog__tips {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    /* OUR SALOONS*/
+    .our_saloons__text {
+        width: 430px;
+    }
+
+    /* SUBSCRIPTION*/
+
+    .subscription__content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__benefits {
+        margin-bottom: 20px;
+    }
+
+    .subscription__benefit {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.2em;
+        margin-bottom: 15px;
+        display: flex;
+    }
+
+    .subscription__form > form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscription__form > form > input {
+        margin-bottom: 15px;
+    }
+
+    /* BUTTONS*/
+    .btn {
+        font-size: 12px;
+        padding: 5px 15px;
+        min-width: 100px;
+    }
+}
+
+@media (max-width: 376px) {
+
+    /* PRODUCTS*/
+
+    .products__title {
+        margin-bottom: 15px;
+    }
+
+    .products__sections .section {
+        width: 49%;
+        margin-bottom: 5px;
+    }
+
+    .products__subsections {
+        grid-template-columns: 1fr;
+    }
+
+    /* OUR SALOONS*/
+    .our_saloons__text {
+        width: 230px;
+    }
+
+    /* SOCIALS */
+
+    .socials__contents {
+        grid-template-columns: 1fr;
+        grid-template-areas: "video-1"
+                             "photo-1"
+                             "photo-2"
+                             "photo-3"
+                             "photo-4"
+                             "video-2";
+    }
+
+    /* SUBSCRIPTION*/
+
+    .subscription__form > form > input {
+        font-size: 10px;
+    }
+
+
 }
